@@ -1,4 +1,4 @@
 package library;
 
-public class Video {
+public class Video extends LoanItems {
 }
