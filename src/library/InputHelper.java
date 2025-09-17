@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *InputHelper helps get and validate inputs from the user.<br>
- * Has methods:<br>
+ * <strong>Has methods:</strong><br>
  * {@link #userInputInt()} which gets and verifies a positive integer from user input. <br>
  * {@link #userInputType()} which gets and verifies a String of correct type. <br>
  * {@link #userInputTitle()} which gets a String

@@ -4,7 +4,7 @@ package library;
  * InvetoryHelper registers and shows items in inventory.
  * This makes Use of {@link InputHelper} to request user inputs. <br>
  *
- *Has methods:
+ *<strong>Has methods:</strong><br>
  * {@link #makeInventory()} which registers an inventory.<br>
  * {@link #showInventory(LoanItems[])} which shows an inventory.
  */
@@ -15,7 +15,7 @@ public class InventoryHelper {
 
     /**
      * Make inventory prompts the user to register inventory items using {@link InventoryHelper}.
-     * @return array of objects of type LoanItems
+     * @return array of objects of types {@link Book} and {@link Video}.
      */
     public LoanItems[] makeInventory(){
         LoanItems[] items = new LoanItems[helper.userInputInt()];
@@ -35,13 +35,13 @@ public class InventoryHelper {
             }
             i++;
         }
-        //success print
+        System.out.println("You have registered " + items.length + " items.");
         return items;
     }
 
     /**
      * showInventory prints an input inventory array using the items' own toString method.
-     * @param items an array of {@link LoanItems}
+     * @param items an array of {@link Book} and/or {@link Video}
      */
     public void showInventory(LoanItems[] items){
         System.out.println("LIST OF LOAN ITEMS:\n" +
