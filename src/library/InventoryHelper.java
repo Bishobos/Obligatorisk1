@@ -22,7 +22,7 @@ public class InventoryHelper {
 
         int i = 0;
         while (i < items.length){
-            //register current item info printer
+            System.out.println("ITEM no. " + (i+1));
             //ask for type
             String type = helper.userInputType();
             //ask for title

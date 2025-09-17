@@ -7,6 +7,6 @@ public class Video extends LoanItems {
 
     @Override
     public String toString(){
-        return "video   " + this.title;
+        return "Video   " + this.title;
     }
 }

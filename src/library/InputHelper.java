@@ -24,14 +24,14 @@ public class InputHelper {
         int input;
 
         do{
-            //print input request
+            System.out.println("Please input the number of items you wish to register.");
             while(!scanner.hasNextInt()){
-                //print invalid input statement
+                System.out.println("You have input an invalid number.\nPlease input an integer above zero.");
                 scanner.next();
             }
             input =scanner.nextInt();
         }while (input<=0);
-        //print result
+        System.out.println("You are currently attempting to register " + input + " items.");
         scanner.nextLine();
         return input;
     }
@@ -44,7 +44,7 @@ public class InputHelper {
 
     String userInputType(){
 
-        System.out.println("input gafoofl");
+        System.out.println("Please input the type of item you are trying to register.\nValid types are: \"Book\", \"Video\".");
         String input = scanner.nextLine();
         boolean isDone = false;
 
@@ -52,19 +52,14 @@ public class InputHelper {
         while (!isDone){
             if (input.equalsIgnoreCase("Book") ||
             input.equalsIgnoreCase("Video")){
-
-                //input is valid statement
-                System.out.println("valid");
                 isDone = true;
-
-            }else{
-                //return invalid input statement
-                System.out.println("invalid");
+            }
+            else{
+                System.out.println("Please input a valid type.\nValid types are: \"Book\", \"Video\".");
                 input = scanner.nextLine();
             }
 
         }
-        System.out.println(input);
         return input;
 
     }
@@ -74,6 +69,7 @@ public class InputHelper {
      * @return user String input.
      */
     String userInputTitle(){
+        System.out.println("Please input the title of the item you are trying to register.");
         return scanner.nextLine();
     }
 }
